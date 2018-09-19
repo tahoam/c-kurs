@@ -8,6 +8,7 @@ int convert(int a)
 
 
 // source.c
+#include <stdio.h>
 
 int main()
 {
@@ -21,3 +22,6 @@ int main()
 
 	sleep(10);
 }
+
+// #include <> vs "": <> search for file in compiler prespecified location.
+// "" search same directory as file cointaining the 
