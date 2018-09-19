@@ -18,4 +18,5 @@ upgifter  färdiga   rättade   ack poäng
 1.3.5       1                     ?/2
 1.3.6       1                     ?/1
                                   3/13
-                                  
+
+1.4.1                             ?/2     
