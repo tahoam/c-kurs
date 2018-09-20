@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 #include <time.h>
 
 void sleep(int a)
@@ -35,9 +34,9 @@ int main() // inmatningsmetod av data på rätt format yyyy,mm,dd,hh,mmm,ss beh�
 
 	long int tottime;
 	
-	for (int i = 2; i >= 0; i--) // beräknar antal sekunder, minuter och timmar, görs förenklingen att varje månad är 30 dagar skulle allt kunna räknas av loopen...
+	for (int i = 2; i >= 0; i--) // beräknar antal sekunder, minuter och timmar, görs förenklingen att varje månad är 30 dagar skulle allt kunna räknas i loopen...
 	{
-		while (date1[i + 3] != date2[i + 3])
+		while (date1[i + 3] != date2[i + 3]) //+3 pga att ellement 6 motsvarar sekunder måste beräknas först pga möjlig pvrkan på minuter osv...
 		{
 			date1[i + 3]++;
 			times[i]++;
