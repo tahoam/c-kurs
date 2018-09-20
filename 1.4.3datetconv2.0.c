@@ -24,14 +24,14 @@ int main() // inmatningsmetod av data på rätt format yyyy,mm,dd,hh,mmm,ss beh�
 	int tfinal[3] = { date1[5],date1[4],date1[3] };
 	int tlimits[3] = { 24,60,60 }; // datagränser
 
-	int days = 0; // dagar från element 3
+	int days = 0; // dagar från räkning av dagar
 
-	int mdays = 0; // dagar från element 2
+	int mdays = 0; // dagar från räkning av månader
 
 	int y = 0; //skillnad i år
 	int ydays = 0; // skillnad i år omräknat till dagar
 
-	long int tottime;
+	long int tottime; // total tid i sekunder
 
 	for (int i = 2; i >= 0; i--) // beräknar antal sekunder, minuter och timmar, görs förenklingen att varje månad är 30 dagar skulle allt kunna räknas i loopen...
 	{
@@ -60,8 +60,6 @@ int main() // inmatningsmetod av data på rätt format yyyy,mm,dd,hh,mmm,ss beh�
 		days = date2[2] - date1[2];
 		printf("days: %d\n", days);
 	}
-
-
 
 
 	while (date1[1] != date2[1])
