@@ -1,3 +1,5 @@
+
+
 #include <stdio.h>
 #include <time.h>
 
@@ -14,8 +16,18 @@ void sleep(int a)
 
 int main() // inmatningsmetod av data på rätt format yyyy,mm,dd,hh,mmm,ss behövs ännu
 {
-	int date1[6] = { 2000,1,1,12,15,59 }; // startår
-	int date2[6] = { 2005,2,2,5,30,20 }; // slutår
+	int date1[6] = { 2000,2,2,12,15,59 }; // startår
+	int date2[6] = { 2005,1,1,5,30,20 }; // slutår
+	int sy, sm, sd, sh, smin, ss;
+	int fy, fm, fd, fh, fmin, fs;
+	printf("starting year: enter: yyyy enter mm enter dd enter h enter m enter s enter");
+	scanf("%i %i %i %i %i %i", &date1[0], &date1[1], &date1[2], &date1[3], &date1[4], &date1[5]);
+	printf("ending year: enter: yyyy enter mm enter dd enter h enter m enter s enter");
+	scanf("%i %i %i %i %i %i", &date2[0], &date2[1], &date2[2], &date2[3], &date2[4], &date2[5]);
+	//scanf("%i %i %i %i %i %i", &sy, &sm, &sd, &sh, &smin, &ss);
+	//scanf("%i %i %i %i %i %i", %fy, &fm, &fd, &fh, &fmin, &fs);
+	//date1 = [ sy, sm, sd, sh, smin, ss ];
+
 
 	int monthdays[12] = { 31, 28, 31, 30, 31, 30,31,31,30,31,30,31 };
 
@@ -31,7 +43,7 @@ int main() // inmatningsmetod av data på rätt format yyyy,mm,dd,hh,mmm,ss beh�
 	int y = 0; //skillnad i år
 	int ydays = 0; // skillnad i år omräknat till dagar
 
-	long int tottime; // total tid i sekunder
+	long tottime; // total tid i sekunder
 
 	for (int i = 2; i >= 0; i--) // beräknar antal sekunder, minuter och timmar, görs förenklingen att varje månad är 30 dagar skulle allt kunna räknas i loopen...
 	{
@@ -81,7 +93,7 @@ int main() // inmatningsmetod av data på rätt format yyyy,mm,dd,hh,mmm,ss beh�
 
 	printf("days contribution from years: %d\n", ydays);
 
-	tottime = times[0] + times[1] * 60 + times[2] * 60 * 60 + (days + mdays + ydays) * 24 * 60 * 60;
+	tottime = times[2] + times[1] * 60 + times[0] * 60 * 60 + (days + mdays + ydays) * 24 * 60 * 60;
 
 	printf("secounds between dates: %d\n", tottime);
 
